@@ -1,4 +1,3 @@
-import { DeployButton } from "@/components/deploy";
 import { Footer } from "@/components/footer";
 import * as FadeIn from "@/components/motion/staggers/fade";
 import { Posts } from "@/components/posts";
@@ -52,7 +51,6 @@ export default function Home() {
       <FadeIn.Item>
         <Footer />
       </FadeIn.Item>
-      <DeployButton />
     </FadeIn.Container>
   );
 }
