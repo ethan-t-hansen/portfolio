@@ -12,6 +12,10 @@
 @import url("@radix-ui/colors/yellow-dark-alpha.css");
 @import url("@radix-ui/colors/black-alpha.css");
 @import url("@radix-ui/colors/white-alpha.css");
+@import url("@radix-ui/colors/blue.css");
+@import url("@radix-ui/colors/blue-alpha.css");
+@import url("@radix-ui/colors/blue-dark.css");
+@import url("@radix-ui/colors/blue-dark-alpha.css");
 
 @tailwind base;
 @tailwind components;
@@ -30,8 +34,8 @@
     --border: var(--gray-4);
     --scrollbar-thumb: var(--gray-4);
     --scrollbar-track: transparent;
-    --selection-background: var(--pink-3);
-    --selection-foreground: var(--pink-11);
+    --selection-background: var(--blue-3);
+    --selection-foreground: var(--blue-11);
     --kbd-background: var(--gray-3);
     --kbd-foreground: var(--gray-11);
     --kbd-border: var(--gray-4);
@@ -304,4 +308,48 @@
       border-radius: var(--radius-base);
     }
   }
+}
+
+/* spinning text logo */
+
+#rotating-text {
+  margin: -24px;
+  animation-name: rotate-circle;
+  animation-duration: 34s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate-circle {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.text-path {
+  fill: black; /* Default color for light mode */
+}
+
+&.dark .text-path {
+  fill: white; /* Change fill to white in dark mode */
+}
+
+.ac-icon {
+  filter: invert(100%);
+  opacity: 0.85;
+}
+
+&.dark .ac-icon {
+  filter: invert(0%);
+  opacity: 1;
+}
+
+/* animation styles */
+
+.indigo-underline-animation {
+  @apply font-medium pb-[0.2rem] bg-left-bottom bg-gradient-to-r from-blue-500 to-pink-700 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-300 hover:opacity-100;
+}
+
+.indigo-gradient {
+  @apply bg-gradient-to-r from-blue-400 to-pink-600 inline-block text-transparent bg-clip-text;
 }

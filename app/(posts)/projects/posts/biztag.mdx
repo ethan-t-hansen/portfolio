@@ -1,0 +1,62 @@
+---
+title: "BizTag - Figma Nametag Generator Plugin (Software Dev)"
+slug: "biztech"
+tags: ["UI/UX", "Design Systems", "Branding"]
+summary: "Redesigning a web portal for UBC's largest technology club."
+ 
+author:
+  name: "Ethan"
+  link: "https://ethanhansen.vercel.app/"
+  handle: "@ethan-t-hansen"
+ 
+time:
+  created: "2024-10-20T05:24:40.921Z"
+  updated: "2024-10-21T08:51:56.026Z"
+ 
+media:
+  image: "/assets/hero/biztag-hero.webp"
+ 
+seo:
+  title: "..."
+  description: "..."
+  keywords: ["UI/UX", "Design Systems", "Branding"]
+---
+
+## My Role
+Developer
+
+## Automating the Name Tag Design Process
+
+Conferences, case comps, and hackathons make up the highlights of many student's time in universities. Why? Because **they combine hands-on learning, creativity, teamwork, networking,** and the **thrill of solving real-world challenges in a lively, collaborative environment.** These events are especially rewarding for the organizing team, who get to see their hard work pay off.
+
+## The Problem Space
+
+There is an often overseen piece of the puzzle that leads to an event's success: designing name tags. Professional delegates often wear nametags around their neck telling you who they are, what company they're from, and why they're there. These don't appear out of thin air - designers and marketing students alike are the force behind these designs. 
+
+BizTech's previous solution for designing these was an entirely manual process, where it would take hours to copy and paste information from a google spreadsheet and generate QR codes using an online converter. The existing manual process also led to inconsistencies and required significant time investment to audit mistakes, detracting from other important event preparations.
+
+## My Solution
+
+BizTag is a powerful Figma plugin that is built by a designer, for designers. The app communicates with [Figma's Plugin API](https://www.figma.com/plugin-docs/api/api-reference/) to build a series of clean, customizable, and organized name tags.
+
+All it takes is a background image with a resolution of your choosing, and a .csv/.json file populated with information on your event partners, and you can complete 2 hours worth of work with a single click. The plugin automatically places name, company, and pronouns on the frontside, and generates a QR code using the [QR code api](https://goqr.me/api/) to place on the backside.
+
+Overall, this plugin addresses three key designer pain points:
+
+1. **Automation of Information:** Designers no longer have to manually input partner information into text boxes - the application takes that information directly from an uploaded .csv file.
+2. **Automation of Layout:** Designers no longer have to fiddle with auto-layout and text sizing - each tag is generated with auto-layout enabled and organized to allow for multi-edit across all nametags.
+3. **Automation of QR Generation:** Designers no longer have to convert their own QR codes, the app fetches and generates a QR code for you.
+
+## Tech Stack
+
+The BizTag plugin is built using the following technologies:
+
+- **Figma Plugin API:** Utilized for integrating the plugin with Figma’s design environment and communicating directly with the canvas.
+- **TypeScript:** Used for type safety and enhancing code maintainability.
+- **React:** Implemented for building the plugin’s user interface.
+- **Styled Components:** Used for styling the plugin’s UI to ensure a seamless user experience.
+
+## Takeaways
+
+1. **Code can help streamline everyday processes** that you might not typically come to mind
+2. **Learning by doing** is the most effective way to become a better developer - tracing bugs, uncovering errors, and reading through documentation leads to resilience and innovation

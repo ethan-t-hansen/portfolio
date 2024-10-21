@@ -6,6 +6,7 @@ import { formatter } from "@/lib/formatter";
 import { getPosts } from "@/lib/mdx";
 import { MDX } from "@/mdx-components";
 
+import Image from "next/image";
 import React from "react";
 import { readingTime } from "reading-time-estimator";
 
@@ -34,6 +35,17 @@ export const Layout = ({ post, route }: Props) => {
 
   return (
     <React.Fragment>
+      {post.media?.image ? (
+        <Image
+          src={post.media?.image}
+          alt="Project Image"
+          width={1000}
+          height={200}
+          className="mb-6 rounded-md"
+        />
+      ) : (
+        <></>
+      )}
       <div className="flex flex-col">
         <div>
           <h1>{post.title}</h1>
