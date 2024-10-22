@@ -2,13 +2,15 @@ import type { Post } from "@/types";
 
 import { TableOfContents } from "@/components/on-this-page";
 import { PostNavigation } from "@/components/post-navigation";
+import { ProjectImage } from "@/components/project-image";
 import { formatter } from "@/lib/formatter";
 import { getPosts } from "@/lib/mdx";
 import { MDX } from "@/mdx-components";
 
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 import { readingTime } from "reading-time-estimator";
+
 
 interface Props {
   post: Post;
@@ -16,6 +18,7 @@ interface Props {
 }
 
 export const Layout = ({ post, route }: Props) => {
+
   const posts = getPosts(route);
 
   const Seperator = () => {
@@ -36,13 +39,14 @@ export const Layout = ({ post, route }: Props) => {
   return (
     <React.Fragment>
       {post.media?.image ? (
-        <Image
-          src={post.media?.image}
-          alt="Project Image"
-          width={1000}
-          height={200}
-          className="mb-6 rounded-md"
-        />
+        <ProjectImage post={post}/>
+        // <Image
+        //   src={post.media?.image}
+        //   alt="Project Image"
+        //   width={1000}
+        //   height={200}
+        //   className='mb-6 rounded-md'
+        // />
       ) : (
         <></>
       )}

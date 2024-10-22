@@ -327,7 +327,7 @@
 }
 
 .text-path {
-  fill: black; /* Default color for light mode */
+  fill: rgb(23, 23, 23); /* Default color for light mode */
 }
 
 &.dark .text-path {

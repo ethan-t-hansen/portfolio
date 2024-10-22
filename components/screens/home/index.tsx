@@ -45,7 +45,13 @@ export default function Home() {
       </div>
 
       <FadeIn.Item>
-        <Posts category="projects" />
+        <Posts category="programming" />
+      </FadeIn.Item>
+      <FadeIn.Item>
+        <Posts category="interface" />
+      </FadeIn.Item>
+      <FadeIn.Item>
+        <Posts category="design" />
       </FadeIn.Item>
       <Spacer />
       <FadeIn.Item>
