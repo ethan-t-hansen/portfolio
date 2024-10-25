@@ -17,11 +17,11 @@ export default function MDXImage({ caption, alt, ...props }: MDXImageProps) {
 
   return (
     <motion.a
-      className="my-6 flex cursor-pointer flex-col justify-end gap-2"
+      className="flex cursor-pointer flex-col justify-end gap-2"
       href={href}
-      whileHover={{ scale: 0.975, opacity: 0.9 }}
+      whileHover={{ scale: 0.99, opacity: 0.9 }}
     >
-      <div className="relative max-h-96 w-full overflow-hidden rounded-large border border-border">
+      <div className="relative h-full w-full overflow-hidden rounded-md border border-border">
         <Image
           unoptimized
           alt={alt}

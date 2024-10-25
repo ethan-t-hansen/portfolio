@@ -2,7 +2,7 @@
 
 import type { Post } from "@/types";
 
-import { Skeleton } from "@/components/ui/skeleton";
+// import { Skeleton } from "@/components/ui/skeleton";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -17,8 +17,8 @@ export const ProjectImage = ({ post }: Props) => {
   return (
     <>
       {post.media?.image ? (
-        <div className="relative mb-6 h-96 w-full">
-          {isLoading && <Skeleton className="h-96 bg-neutral-300"/>}
+        <div className="relative mb-6 max-h-96 w-full">
+          {/* {isLoading && <Skeleton className="h-96 bg-neutral-300"/>}
           <Image
             src={post.media?.image}
             alt="Project Image"
@@ -26,6 +26,24 @@ export const ProjectImage = ({ post }: Props) => {
             height={200}
             onLoad={() => setIsLoading(false)}
             className={`mb-6 rounded-md transition-opacity duration-500 ${isLoading ? "opacity-0" : "opacity-100"}`}
+          /> */}
+          <Image
+            unoptimized
+            src={post.media?.image}
+            alt="Project Image"
+            width={1000}
+            height={1000}
+            sizes="100vw"
+            style={{
+              objectFit: "contain",
+              width: "100%",
+              height: "auto",
+              objectPosition: "center",
+              WebkitFilter: isLoading ? "blur(4px)" : "none",
+              transition: "all 0.3s ease",
+            }}
+            onLoad={() => setIsLoading(false)}
+            className='rounded-md'
           />
         </div>
         

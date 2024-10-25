@@ -22,7 +22,7 @@ const SpinningLogo = () => {
           <text>
             <textPath
               href="#circle"
-              className="text-lg text-path tracking-[0.15em]"
+              className="text-lg text-path tracking-[0.195em]"
             >
               PRODUCT DESIGN • SOFTWARE DEV • UI / UX •
             </textPath>

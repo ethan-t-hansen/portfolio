@@ -1,8 +1,8 @@
 ---
 title: "BizTag - Figma Nametag Generator Plugin"
 slug: "biztech"
-tags: ["UI/UX", "Design Systems", "Branding"]
-summary: "Redesigning a web portal for UBC's largest technology club."
+tags: ["Development", "Figma", "Plugin", "React"]
+summary: "Streamlining graphic design processes for events"
  
 author:
   name: "Ethan"
@@ -19,27 +19,38 @@ media:
 seo:
   title: "..."
   description: "..."
-  keywords: ["UI/UX", "Design Systems", "Branding"]
+  keywords: ["Development", "Figma", "Plugin", "React"]
 ---
 
 ## My Role
-Developer
+Plugin Developer
 
-## Automating the Name Tag Design Process
+## Automating the name tag design process
 
-Conferences, case comps, and hackathons make up the highlights of many student's time in universities. Why? Because **they combine hands-on learning, creativity, teamwork, networking,** and the **thrill of solving real-world challenges in a lively, collaborative environment.** These events are especially rewarding for the organizing team, who get to see their hard work pay off.
+Conferences, case comps, and hackathons make up the highlights of many student's time in universities. Why? Because they combine hands-on learning, creativity, teamwork, networking, and the thrill of solving real-world challenges in a lively, collaborative environment. 
 
-## The Problem Space
+If you've ever attended one of these events, you might notice that professional partners have name tags around their neck. Designing these name tags can take hours of manual work to make the layouts consistent and audit for content mistakes. But what if all that work could be done with the click of a button?
 
-There is an often overseen piece of the puzzle that leads to an event's success: designing name tags. Professional delegates often wear nametags around their neck telling you who they are, what company they're from, and why they're there. These don't appear out of thin air - designers and marketing students alike are the force behind these designs. 
+## Meet BizTag
 
-BizTech's previous solution for designing these was an entirely manual process, where it would take hours to copy and paste information from a google spreadsheet and generate QR codes using an online converter. The existing manual process also led to inconsistencies and required significant time investment to audit mistakes, detracting from other important event preparations.
+BizTag is a powerful Figma plugin that is built by a designer, for designers. The app communicates with Figma's Plugin API to build a series of clean, customizable, and organized name tags.
 
-## My Solution
+All it takes is a background image with a resolution of your choosing, and a .csv file populated with information on your event partners, and you can generate dozens of name tags instantly. The plugin automatically places name, company, and pronouns on the frontside, and generates a QR code to place on the backside using a QR code API.
 
-BizTag is a powerful Figma plugin that is built by a designer, for designers. The app communicates with [Figma's Plugin API](https://www.figma.com/plugin-docs/api/api-reference/) to build a series of clean, customizable, and organized name tags.
+Each frame comes with auto layout, enabling ease of customizability for the designer.
 
-All it takes is a background image with a resolution of your choosing, and a .csv/.json file populated with information on your event partners, and you can complete 2 hours worth of work with a single click. The plugin automatically places name, company, and pronouns on the frontside, and generates a QR code using the [QR code api](https://goqr.me/api/) to place on the backside.
+## Image for Reference
+
+<div className='mt-4'>
+  <Image
+    src="/assets/project-images/biztag/biztag-2.webp"
+    alt="Image"
+    width={200}
+    height={100}
+  />
+</div>
+
+## What this means
 
 Overall, this plugin addresses three key designer pain points:
 
@@ -52,11 +63,11 @@ Overall, this plugin addresses three key designer pain points:
 The BizTag plugin is built using the following technologies:
 
 - **Figma Plugin API:** Utilized for integrating the plugin with Figma’s design environment and communicating directly with the canvas.
-- **TypeScript:** Used for type safety and enhancing code maintainability.
+- **TypeScript:** For ensuring type safety and enhancing code maintainability.
 - **React:** Implemented for building the plugin’s user interface.
-- **Styled Components:** Used for styling the plugin’s UI to ensure a seamless user experience.
 
 ## Takeaways
 
-1. **Code can help streamline everyday processes** that you might not typically come to mind
-2. **Learning by doing** is the most effective way to become a better developer - tracing bugs, uncovering errors, and reading through documentation leads to resilience and innovation
+1. Stepping outside your comfort zone can help you **see how code can simplify your work systems**.
+2. **Learning by doing** is the **most effective way to become a better developer** - tracing bugs, uncovering errors, and reading through documentation leads to resilience and innovation.
+3. **Challenging yourself** can be fun! (at a reasonable pace)
