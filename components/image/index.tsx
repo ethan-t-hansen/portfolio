@@ -16,10 +16,9 @@ export default function MDXImage({ caption, alt, ...props }: MDXImageProps) {
   const href = props.src.toString();
 
   return (
-    <motion.a
+    <motion.div
       className="flex cursor-pointer flex-col justify-end gap-2"
-      href={href}
-      whileHover={{ scale: 0.99, opacity: 0.9 }}
+      whileHover={{ rotate: 1, scale: 1.01, opacity: 0.95 }}
     >
       <div className="relative h-full w-full overflow-hidden rounded-md border border-border">
         <Image
@@ -41,6 +40,6 @@ export default function MDXImage({ caption, alt, ...props }: MDXImageProps) {
         />
       </div>
       {caption && <sub className="pt-2 text-center">{caption}</sub>}
-    </motion.a>
+    </motion.div>
   );
 }
