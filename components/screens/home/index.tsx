@@ -4,7 +4,6 @@ import { Posts } from "@/components/posts";
 import { SpinningLogo } from "@/components/spinning-textpath";
 
 const Spacer = () => <div style={{ marginTop: "24px" }} />;
-
 export default function Home() {
   return (
     <FadeIn.Container>

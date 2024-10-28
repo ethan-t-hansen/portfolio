@@ -1,5 +1,6 @@
 import { formatter } from "@/lib/formatter";
 import { getPosts } from "@/lib/mdx";
+import Image from "next/image"
 
 import { Link as NextViewTransition } from "next-view-transitions";
 import React from "react";
@@ -38,9 +39,19 @@ export const Posts = ({ category }: PostProps) => {
             <Seperator />
             <NextViewTransition
               href={`/${category}/${post.slug}`}
-              className="flex w-full justify-between py-2"
+              className="flex w-full items-center justify-between py-2"
             >
-              <p>{post.title}</p>
+              <div className="flex items-center gap-4">
+                <Image
+                  src={post.media?.image ? post.media.image : ''}
+                  width={64}
+                  height={64}
+                  className='rounded-md'
+                  alt="Project Image"
+                />
+                <p className="mt-0">{post.title}</p>
+              </div>
+
               <p className="mt-0 text-muted">
                 {formatter.date(new Date(post.time.created))}
               </p>
