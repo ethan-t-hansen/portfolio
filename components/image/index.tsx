@@ -17,8 +17,8 @@ export default function MDXImage({ caption, alt, ...props }: MDXImageProps) {
 
   return (
     <motion.div
-      className="flex cursor-pointer flex-col justify-end gap-2"
-      whileHover={{ rotate: 1, scale: 1.01, opacity: 0.95 }}
+      className="flex flex-col justify-end gap-2"
+      whileHover={{ scale: 0.99, opacity: 0.95 }}
     >
       <div className="relative h-full w-full overflow-hidden rounded-md border border-border">
         <Image
