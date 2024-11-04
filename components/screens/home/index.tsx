@@ -16,17 +16,16 @@ export default function Home() {
             <div className="flex justify-between">
               <div>
                 <h1 className="font-semibold text-xl">Ethan Hansen</h1>
-                <h2>Simplifying digital interaction through design</h2>
+                <h2>Software Dev + Interface Designer</h2>
               </div>
             </div>
           </FadeIn.Item>
           <FadeIn.Item>
             <p>
-              Hi there! I'm a product designer specializing in interface
-              development and user experience.
+              Hi there! I'm a student at the University of British Columbia exploring digital interaction and product design.
             </p>
             <div className="mt-2">
-              Currently interning as a UI / UX developer & front-end engineer
+              Currently interning as a UI / UX Engineer
               at{" "}
               <a
                 target="_blank"
@@ -43,6 +42,10 @@ export default function Home() {
         </div>
       </div>
 
+
+      <FadeIn.Item>
+        <Posts category="experience" />
+      </FadeIn.Item>
       <FadeIn.Item>
         <Posts category="programming" />
       </FadeIn.Item>

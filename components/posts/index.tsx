@@ -41,14 +41,17 @@ export const Posts = ({ category }: PostProps) => {
               href={`/${category}/${post.slug}`}
               className="flex w-full items-center justify-between py-2"
             >
+              
               <div className="flex items-center gap-4">
+              {post.media?.image && 
                 <Image
-                  src={post.media?.image ? post.media.image : ''}
+                  src={post.media.image}
                   width={64}
                   height={64}
                   className='rounded-md'
                   alt="Project Image"
                 />
+              }
                 <p className="mt-0">{post.title}</p>
               </div>
 
