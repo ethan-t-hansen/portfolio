@@ -11,14 +11,12 @@ import { MDX } from "@/mdx-components";
 import React from "react";
 import { readingTime } from "reading-time-estimator";
 
-
 interface Props {
   post: Post;
   route: string;
 }
 
 export const Layout = ({ post, route }: Props) => {
-
   const posts = getPosts(route);
 
   const Seperator = () => {
@@ -37,35 +35,25 @@ export const Layout = ({ post, route }: Props) => {
   };
 
   return (
-    <React.Fragment>
-      {post.media?.image ? (
-        <ProjectImage post={post}/>
-        // <Image
-        //   src={post.media?.image}
-        //   alt="Project Image"
-        //   width={1000}
-        //   height={200}
-        //   className='mb-6 rounded-md'
-        // />
-      ) : (
-        <></>
-      )}
-      <div className="flex flex-col">
-        <div>
-          <h1>{post.title}</h1>
+    <div className="max-w-screen-md">
+      <React.Fragment>
+        <div className="flex flex-col">
+          <div>
+            <h1>{post.title}</h1>
+          </div>
+          <div className="mt-1 flex gap-2 text-muted text-small">
+            <PublishedTime />
+            <Seperator />
+            <UpdateTime />
+            <Seperator />
+            <ReadingTime />
+          </div>
         </div>
-        <div className="mt-1 flex gap-2 text-muted text-small">
-          <PublishedTime />
-          <Seperator />
-          <UpdateTime />
-          <Seperator />
-          <ReadingTime />
-        </div>
-      </div>
 
-      <MDX source={post.content} />
-      <PostNavigation posts={posts} />
-      <TableOfContents />
-    </React.Fragment>
+        <MDX source={post.content} />
+        <PostNavigation posts={posts} />
+        <TableOfContents />
+      </React.Fragment>
+    </div>
   );
 };

@@ -16,6 +16,10 @@
 @import url("@radix-ui/colors/blue-alpha.css");
 @import url("@radix-ui/colors/blue-dark.css");
 @import url("@radix-ui/colors/blue-dark-alpha.css");
+@import url("@radix-ui/colors/indigo.css");
+@import url("@radix-ui/colors/indigo-alpha.css");
+@import url("@radix-ui/colors/indigo-dark.css");
+@import url("@radix-ui/colors/indigo-dark-alpha.css");
 
 @tailwind base;
 @tailwind components;
@@ -34,8 +38,8 @@
     --border: var(--gray-4);
     --scrollbar-thumb: var(--gray-4);
     --scrollbar-track: transparent;
-    --selection-background: var(--blue-3);
-    --selection-foreground: var(--blue-11);
+    --selection-background: var(--indigo-5);
+    --selection-foreground: var(--indigo-11);
     --kbd-background: var(--gray-3);
     --kbd-foreground: var(--gray-11);
     --kbd-border: var(--gray-4);
@@ -307,6 +311,8 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-base);
     }
+
+    box-sizing: border-box;
   }
 }
 
@@ -353,3 +359,24 @@
 .indigo-gradient {
   @apply bg-gradient-to-r from-blue-400 to-pink-600 inline-block text-transparent bg-clip-text;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.landing-grid {
+  box-sizing: border-box;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 24px;
+  grid-template-areas: 
+    "Area1 Area2"
+    "Area1 Area3"
+    "Area4 Area4"; 
+}
+
+.Area1 { grid-area: Area1; }
+.Area2 { grid-area: Area2; }
+.Area3 { grid-area: Area3; }
+.Area4 { grid-area: Area4; }

@@ -1,64 +1,104 @@
 import { Footer } from "@/components/footer";
 import * as FadeIn from "@/components/motion/staggers/fade";
+import Navigation from "@/components/navigation";
 import { Posts } from "@/components/posts";
 import { SpinningLogo } from "@/components/spinning-textpath";
+
+import Image from "next/image";
 
 const Spacer = () => <div style={{ marginTop: "24px" }} />;
 export default function Home() {
   return (
     <FadeIn.Container>
-      <div className="flex flex-col gap-8 md:flex-row md:items-center">
+      <div className="sticky top-8 z-10">
         <FadeIn.Item>
-          <SpinningLogo />
+          <Navigation />
         </FadeIn.Item>
-        <div className="space-y-2">
-          <FadeIn.Item>
-            <div className="flex justify-between">
-              <div>
-                <h1 className="font-semibold text-xl">Ethan Hansen</h1>
-                <h2>Software Dev + Interface Designer</h2>
-              </div>
-            </div>
-          </FadeIn.Item>
-          <FadeIn.Item>
-            <p>
-              Hi there! I'm a student at the University of British Columbia exploring digital interaction and product design.
-            </p>
-            <div className="mt-2">
-              Currently interning as a UI / UX Engineer
-              at{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://momentenergy.com/"
-                className="group inline-block"
-              >
-                <span className="indigo-underline-animation">
-                  <div className="indigo-gradient">Moment Energy.</div>
-                </span>
-              </a>
-            </div>
-          </FadeIn.Item>
+      </div>
+
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-20 text-center space-y-4">
+        <FadeIn.Item>
+          <Image
+            src="/eth-logo.svg"
+            alt="ETH Logo"
+            width={256}
+            height={256}
+            className="mx-auto my-8"
+          />
+        </FadeIn.Item>
+        <FadeIn.Item>
+          <p className="text-3xl flex font-extralight flex-row items-center justify-center text-gray-500 gap-[5px] pb-0">
+            Hey,
+            <span className="font-medium text-gray-950"> I'm Ethan. </span>I
+            like building cool things on the web.
+          </p>
+        </FadeIn.Item>
+        <FadeIn.Item>
+          <p className="text-lg text-gray-500 m-0 text-nowrap">
+            Design Engineer @ ICBC / CS + Business @ UBC
+          </p>
+        </FadeIn.Item>
+        <FadeIn.Item>
+          <div className="flex justify-center gap-4">
+            <button>See my projects</button>
+            <button>View my Resume</button>
+          </div>
+        </FadeIn.Item>
+      </section>
+
+      <div className="landing-grid mt-24 box-border">
+        <div className="Area1 w-full h-full flex flex-col rounded-xl">
+          <Image
+            src={"/assets/hero/biztech-hero.webp"}
+            style={{ objectFit: "cover" }}
+            width={64}
+            height={64}
+            sizes={"100vw"}
+            className="h-full w-full rounded-xl"
+            alt="image..."
+          />
+          <p className="text-2xl font-medium mt-2"> Project Title </p>
+        </div>
+        <div className="Area2 w-full h-full flex flex-col rounded-xl">
+          <Image
+            src={"/assets/hero/biztech-hero.webp"}
+            style={{ objectFit: "cover" }}
+            width={64}
+            height={64}
+            sizes={"100vw"}
+            className="h-full w-full rounded-xl"
+            alt="image..."
+          />
+          <p className="text-2xl font-medium mt-2"> Project Title </p>
+        </div>
+        <div className="Area3 w-full h-full flex flex-col rounded-xl">
+          <Image
+            src={"/assets/hero/biztech-hero.webp"}
+            style={{ objectFit: "cover" }}
+            width={64}
+            height={64}
+            sizes={"100vw"}
+            className="h-full w-full rounded-xl"
+            alt="image..."
+          />
+          <p className="text-2xl font-medium mt-2"> Project Title </p>
+        </div>
+        <div className="Area4 w-full h-72 flex flex-col rounded-xl">
+          <Image
+            src={"/assets/hero/biztech-hero.webp"}
+            style={{ objectFit: "cover" }}
+            width={64}
+            height={64}
+            sizes={"100vw"}
+            className="h-full w-full rounded-xl"
+            alt="image..."
+          />
+          <p className="text-2xl font-medium mt-2"> Project Title </p>
         </div>
       </div>
 
-
-      <FadeIn.Item>
-        <Posts category="experience" />
-      </FadeIn.Item>
-      <FadeIn.Item>
-        <Posts category="programming" />
-      </FadeIn.Item>
-      <FadeIn.Item>
-        <Posts category="interface" />
-      </FadeIn.Item>
-      <FadeIn.Item>
-        <Posts category="design" />
-      </FadeIn.Item>
-      <Spacer />
-      <FadeIn.Item>
-        <Footer />
-      </FadeIn.Item>
+      <div className="h-[50vh]"></div>
     </FadeIn.Container>
   );
 }
