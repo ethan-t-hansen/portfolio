@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
 
 import plugin from "tailwindcss/plugin";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
-  important: true,
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,6 +14,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        ...colors,
         gray: {
           1: "var(--gray-1)",
           2: "var(--gray-2)",
@@ -124,7 +125,6 @@ const config: Config = {
         foreground: "var(--fg)",
         muted: "var(--muted)",
         hover: "var(--hover)",
-        border: "var(--border)",
         scrollbar: {
           thumb: "var(--scrollbar-thumb)",
           track: "var(--scrollbar-track)",
@@ -140,17 +140,11 @@ const config: Config = {
         kbd: {
           background: "var(--kbd-background)",
           foreground: "var(--kbd-foreground)",
-          border: "var(--kbd-border)",
         },
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
         apple: ["var(--font-apple)"],
-      },
-      borderRadius: {
-        small: "var(--radius-small)",
-        base: "var(--radius-base)",
-        large: "var(--radius-large)",
       },
     },
   },

@@ -360,10 +360,6 @@
   @apply bg-gradient-to-r from-blue-400 to-pink-600 inline-block text-transparent bg-clip-text;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .landing-grid {
   box-sizing: border-box;
   display: grid; 
